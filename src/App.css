@@ -9,7 +9,6 @@
   --fs-600: 2rem;
   --fs-500: 1rem;
   --fs-400: 0.8rem;
-  width: 100%;
 }
 
 @media (min-width: 800px) {
@@ -18,8 +17,11 @@
     --fs-600: 2rem;
     --fs-500: 1.4rem;
     --fs-400: 1rem;
-    width: 100%;
   }
+}
+
+#root {
+  width: 100%;
 }
 
 h1 {
