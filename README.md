@@ -1,5 +1,12 @@
 # Photo Gallery with React + Vite
 
+-This gallery uses React and Vite. It also uses the Unsplash API.
+
+# How to use:
+
+-Using either your mouse or tab key, you are able to navigate through the images. If you click on an image (or press enter whilst focus on one), it will bring up a larger resolution of the image.
+-There is a search bar, you can type what images you want to see and then press enter/click with mouse. The result will show the first 12 results from the Unsplash API
+
 - User Stories
   🐿️ As a developer, I want the application to use the useState hook so that user interactions (like selecting an image) are smooth and the gallery’s state is managed effectively. y
   🐿️ As a developer, I want to use the useEffect hook to perform side effects, such as fetching image data from an external API. y
