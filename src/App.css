@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --fs-xl: clamp(2rem, 2vw + 1rem, 8rem);
+  --fs-600: 2rem;
+  --fs-500: 1rem;
+  --fs-400: 0.8rem;
+}
+
+@media (min-width: 800px) {
+  :root {
+    --fs-xl: clamp(4rem, 3vw + 1rem, 6rem);
+    --fs-600: 2rem;
+    --fs-500: 1.4rem;
+    --fs-400: 1rem;
+  }
+}
+
+h1 {
+  font-size: var(--fs-xl);
+}
+
+main {
+  width: 100%;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  grid-template-rows: auto;
+  /* align-items: center;
+  justify-content: center; */
+  justify-self: center;
+  align-self: center;
+}
+
+.imgDiv {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.img-thumbnail {
+  min-height: auto;
+  max-height: 90%;
+  max-width: auto;
+}
+
+.modalBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1040;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(15px);
+}
+
+.modal {
+  align-self: center;
+  justify-self: center;
+  margin-top: 1%;
+}
+
+.modalImage {
+  width: auto;
+  height: auto;
+  max-height: 95vh;
+  max-width: 95vw;
+}
+
+.closeModal {
+  position: absolute;
+  margin-top: 1%;
+  margin-left: 1%;
+}
+
+@media (min-width: 800px) {
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+    padding-left: 1%;
+  }
+}
+
+.searchDiv {
+  display: flex;
+  padding-top: 1%;
+  margin-bottom: 1%;
+  justify-content: space-between;
+  padding-left: 2%;
+}
+
+.search {
+  align-self: center;
+  padding-right: 2%;
+}
+
+input {
+  border-radius: 7px;
+  height: 4vh;
+}
