@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: sans-serif, serif;
 }
 
 :root {
@@ -39,11 +40,9 @@ main {
   width: 100%;
   height: 100vh;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   grid-template-rows: auto;
-  /* align-items: center;
-  justify-content: center; */
   justify-self: center;
   align-self: center;
 }
@@ -51,7 +50,6 @@ main {
 .imgDiv {
   width: 100%;
   height: 100%;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -62,17 +60,6 @@ main {
   min-height: auto;
   max-height: 90%;
   max-width: auto;
-}
-
-.modalBackground {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1040;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(15px);
 }
 
 .modal {
@@ -94,13 +81,6 @@ main {
   margin-left: 1%;
 }
 
-@media (min-width: 800px) {
-  .gallery {
-    grid-template-columns: repeat(4, 1fr);
-    padding-left: 1%;
-  }
-}
-
 .searchDiv {
   display: flex;
   padding-top: 1%;
@@ -117,4 +97,37 @@ main {
 input {
   border-radius: 7px;
   height: 4vh;
+  background-color: #0b132b;
+}
+
+footer {
+  height: 4vh;
+  padding-left: 1%;
+  align-content: center;
+}
+
+p {
+  font-size: var(--fs-500);
+}
+
+a {
+  color: #5bc0be;
+}
+
+dialog::backdrop {
+  backdrop-filter: blur(5px);
+}
+
+@media (min-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+    padding-left: 1%;
+  }
+}
+
+@media (min-width: 800px) {
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+    padding-left: 1%;
+  }
 }
